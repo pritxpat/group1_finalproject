@@ -1,0 +1,43 @@
+.navbar {
+    background-color: transparent; /* Transparent background */
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+  }
+  
+  .navbar-brand img {
+    transition: max-width 0.5s ease; /* Smooth transition for logo size */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff; /* White color for navigation links */
+    font-size: 16px; /* Font size for navigation links */
+    margin-right: 15px; /* Right margin for navigation links */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffd700; /* Yellow color on hover for navigation links */
+  }
+  
+  .navbar-toggler {
+    border: none; /* No border for the toggler */
+  }
+  
+  .navbar-toggler span {
+    background-color: #fff; /* White color for toggler bars */
+  }
+  
+  /* Reduce height of navbar on scroll */
+  .navbar-reduce {
+    padding-top: 10px; /* Reduce top padding on scroll */
+    padding-bottom: 10px; /* Reduce bottom padding on scroll */
+  }
+  
+  /* Styling for active navigation link */
+  .navbar-nav .active {
+    color: #ffd700; /* Yellow color for active navigation link */
+  }
+  
+  /* Navbar logo size on scroll */
+  .navbar-reduce .navbar-brand img {
+    max-width: 80px; /* Reduced size for logo on scroll */
+  }
+  
