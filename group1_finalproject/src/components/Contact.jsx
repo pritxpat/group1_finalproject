@@ -109,7 +109,6 @@ function Contact() {
                 center={[43.451637, -80.492024]}
                 zoom={13}
                 scrollWheelZoom={false}
-                style={{ height: "300px", width: "100%" }}
               >
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

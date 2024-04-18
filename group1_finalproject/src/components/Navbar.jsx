@@ -27,7 +27,7 @@ function Navbar() {
     <nav className="navbar navbar-b navbar-trans navbar-expand-md" id="mainNav">
       <div className="container">
         <Link className="navbar-brand js-scroll" to="/">
-          <img src={logo} alt="logo" style={{ maxWidth: '100px' }} />
+          <img src={logo} alt="logo" />
         </Link>
         <button
           className="navbar-toggler collapsed"

@@ -9,37 +9,12 @@ class About extends React.Component {
       skills: [
         { id: "HTML5_skill", content: "HTML5", porcentage: "80%", value: "80" },
         { id: "CSS3_skill", content: "CSS3", porcentage: "75%", value: "75" },
-        {
-          id: "JavaScript_skill",
-          content: "JavaScript",
-          porcentage: "80%",
-          value: "80"
-        },
+        { id: "JavaScript_skill", content: "JavaScript", porcentage: "80%", value: "80" },
         { id: "PHP_skill", content: "PHP", porcentage: "70%", value: "70" },
-        {
-          id: "ReactJS_skill",
-          content: "ReactJS",
-          porcentage: "85%",
-          value: "85"
-        },
-        {
-          id: "Python_skill",
-          content: "Python",
-          porcentage: "70%",
-          value: "70"
-        },
-        {
-          id: "VanillaJS_skill",
-          content: "VanillaJS",
-          porcentage: "60%",
-          value: "60"
-        },
-        {
-          id: "Wordpress_skill",
-          content: "Wordpress",
-          porcentage: "90%",
-          value: "90"
-        }
+        { id: "ReactJS_skill", content: "ReactJS", porcentage: "85%", value: "85" },
+        { id: "Python_skill", content: "Python", porcentage: "70%", value: "70" },
+        { id: "VanillaJS_skill", content: "VanillaJS", porcentage: "60%", value: "60" },
+        { id: "Wordpress_skill", content: "Wordpress", porcentage: "90%", value: "90" }
       ]
     };
   }
@@ -54,43 +29,29 @@ class About extends React.Component {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="row">
-                      <div
-                        className="col-sm-6 col-md-5"
-                        style={{ margin: "0 auto" }}
-                      >
-                        <div
-                          className="about-img"
-                          style={{ textAlign: "center" }}
-                        >
-                          <img
-                            className="img-fluid rounded b-shadow-a"
-                            src={myImage}
-                            alt=""
-                          />
+                      <div className="col-sm-6 col-md-5 about-img">
+                        <div className="about-img">
+                          <img className="img-fluid rounded b-shadow-a" src={myImage} alt="" />
                         </div>
                       </div>
                     </div>
                     <div className="skill-mf">
-                      {this.state.skills.map(skill => {
-                        return (
-                          <React.Fragment key={skill.id}>
-                            <span>{skill.content}</span>{" "}
-                            <span className="pull-right">
-                              {skill.porcentage}
-                            </span>
-                            <div className="progress">
-                              <div
-                                className="progress-bar"
-                                role="progressbar"
-                                style={{ width: skill.porcentage }}
-                                aria-valuenow={skill.value}
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              ></div>
-                            </div>
-                          </React.Fragment>
-                        );
-                      })}
+                      {this.state.skills.map(skill => (
+                        <React.Fragment key={skill.id}>
+                          <span>{skill.content}</span>{" "}
+                          <span className="pull-right">{skill.porcentage}</span>
+                          <div className="progress">
+                            <div
+                              className="progress-bar"
+                              role="progressbar"
+                              style={{ width: skill.porcentage }}
+                              aria-valuenow={skill.value}
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </React.Fragment>
+                      ))}
                     </div>
                   </div>
                   <div className="col-md-6">

@@ -12,9 +12,9 @@ function Home() {
           <div className="container">
             <h1 className="intro-title mb-4">Welcome to My Portfolio</h1>
             <p className="intro-subtitle">
-            <div className="name-container">
-              <p className="name">Pritesh Patel</p>
-            </div>
+              <div className="name-container">
+                <p className="name">Pritesh Patel</p>
+              </div>
               <span className="text-slider-items"></span>
               <strong className="text-slider">
                 <ReactTyped
@@ -30,7 +30,6 @@ function Home() {
                 />
               </strong>
             </p>
-           
             <div className="additional-info">
               <Link to="/about" className="btn btn-primary">For More Info :) </Link>
             </div>
