@@ -1,10 +1,11 @@
 import React from "react";
-import myImage from "../images/myImage.png";
-import "../css/About.css";
+import myImage from "../images/myImage.png"; // Importing image
+import "../css/About.css"; // Importing CSS file for styling
 
 class About extends React.Component {
   constructor() {
     super();
+    // Initializing state with skills data
     this.state = {
       skills: [
         { id: "HTML5_skill", content: "HTML5", porcentage: "80%", value: "80" },
@@ -27,19 +28,25 @@ class About extends React.Component {
             <div className="col-sm-12">
               <div className="box-shadow-full">
                 <div className="row">
+                  {/* Left column containing skills */}
                   <div className="col-md-6">
                     <div className="row">
                       <div className="col-sm-6 col-md-5 about-img">
                         <div className="about-img">
+                          {/* Displaying image */}
                           <img className="img-fluid rounded b-shadow-a" src={myImage} alt="" />
                         </div>
                       </div>
                     </div>
                     <div className="skill-mf">
+                      {/* Mapping through skills data to display */}
                       {this.state.skills.map(skill => (
                         <React.Fragment key={skill.id}>
+                          {/* Displaying skill name */}
                           <span>{skill.content}</span>{" "}
+                          {/* Displaying skill percentage */}
                           <span className="pull-right">{skill.porcentage}</span>
+                          {/* Displaying progress bar */}
                           <div className="progress">
                             <div
                               className="progress-bar"
@@ -54,11 +61,13 @@ class About extends React.Component {
                       ))}
                     </div>
                   </div>
+                  {/* Right column containing about me information */}
                   <div className="col-md-6">
                     <div className="about-me pt-4 pt-md-0">
                       <div className="title-box-2">
                         <h5 className="title-left">About Me</h5>
                       </div>
+                      {/* Personal information */}
                       <p className="lead">
                         <strong>Pritesh Patel</strong>
                         <br />
@@ -68,12 +77,14 @@ class About extends React.Component {
                         <br />
                         227 Grulke Street, Kitchener, ON
                       </p>
+                      {/* Objective */}
                       <p className="lead">Objective:</p>
                       <p>
                         I am a computer engineer with over 2 years of experience
                         working as a SEO executive. Currently, I am in Canada and
                         seeking opportunities to further excel in my career.
                       </p>
+                      {/* Work experience */}
                       <p className="lead">Work Experience:</p>
                       <ul>
                         <li>SEO Trainee at Aussizz Immigration (March 2020 - July 2020)</li>
@@ -81,6 +92,7 @@ class About extends React.Component {
                         <li>SEO Executive at Technocrackers (Dec 2021 - Sept 2022)</li>
                         <li>Bliss Web Solution Pvt. Ltd. (Oct 2022 - Nov 2022)</li>
                       </ul>
+                      {/* Job role */}
                       <p className="lead">Job Role:</p>
                       <ul>
                         <li>Handled more than 30 live projects simultaneously, managing onsite changes and team tasks.</li>
@@ -88,6 +100,7 @@ class About extends React.Component {
                         <li>Participated in project strategy development.</li>
                         <li>Collaborated with various organizational teams including developers, QA, and designers.</li>
                       </ul>
+                      {/* Key strengths */}
                       <p className="lead">Key Strengths:</p>
                       <ul>
                         <li>Onpage SEO</li>
