@@ -1,17 +1,20 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"; // Importing components from react-leaflet
 import '../css/Contact.css'; // Import CSS file for Contact component
 
 function Contact() {
   return (
+    // Contact section
     <section className="contact-mf">
       <div className="container">
         <div className="row">
+          {/* Left column containing contact form */}
           <div className="col-md-6">
             <div className="title-box-2">
               <h5 className="title-left">Send A Message</h5>
             </div>
             <div>
+              {/* Contact form */}
               <form
                 action="https://formspree.io/xdoeonlo"
                 method="POST"
@@ -19,6 +22,7 @@ function Contact() {
               >
                 <div id="errormessage"></div>
                 <div className="row">
+                  {/* Name input */}
                   <div className="col-md-12 mb-3">
                     <div className="form-group">
                       <input
@@ -33,6 +37,7 @@ function Contact() {
                       <div className="validation"></div>
                     </div>
                   </div>
+                  {/* Email input */}
                   <div className="col-md-12 mb-3">
                     <div className="form-group">
                       <input
@@ -47,6 +52,7 @@ function Contact() {
                       <div className="validation"></div>
                     </div>
                   </div>
+                  {/* Subject input */}
                   <div className="col-md-12 mb-3">
                     <div className="form-group">
                       <input
@@ -61,6 +67,7 @@ function Contact() {
                       <div className="validation"></div>
                     </div>
                   </div>
+                  {/* Message textarea */}
                   <div className="col-md-12 mb-3">
                     <div className="form-group">
                       <textarea
@@ -74,6 +81,7 @@ function Contact() {
                       <div className="validation"></div>
                     </div>
                   </div>
+                  {/* Submit button */}
                   <div className="col-md-12">
                     <button
                       type="submit"
@@ -84,14 +92,16 @@ function Contact() {
                   </div>
                 </div>
               </form>
-              </div>
+            </div>
           </div>
+          {/* Right column containing contact information and map */}
           <div className="col-md-6">
             <div className="title-box-2 pt-4 pt-md-0">
               <h5 className="title-left">Get in Touch</h5>
             </div>
             <div className="more-info">
               <p className="lead">
+                {/* Contact information */}
                 Whether you want to get in touch, talk about a project
                 collaboration, or just say hi, I'd love to hear from you.
                 <br />
@@ -104,6 +114,7 @@ function Contact() {
                 <p>227 Grulke Street, Kitchener, ON</p>
               </div>
             </div>
+            {/* Map */}
             <div className="map-wrapper">
               <MapContainer
                 center={[43.451637, -80.492024]}
@@ -113,6 +124,7 @@ function Contact() {
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
+                {/* Marker with popup */}
                 <Marker position={[43.451637, -80.492024]}>
                   <Popup>227 Grulke Street, Kitchener, ON</Popup>
                 </Marker>
